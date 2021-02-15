@@ -22,8 +22,8 @@ if (true) {
 	System.out.println("falsch");
 }
 		
-		int zahl = 6;
-		if(zahl<5) {
+		int zahl1 = 6;
+		if(zahl1<7) {
 			System.out.println("juhu");
 		}
 		
