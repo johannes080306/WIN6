@@ -12,7 +12,7 @@ public class Bubblesort {
 		if(left > right) {
 		zahlen[a] = right;
 		zahlen[a + 1] = left;
-		
+	
 		
 		
 		
