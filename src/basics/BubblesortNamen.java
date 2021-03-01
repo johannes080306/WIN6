@@ -23,7 +23,7 @@ public class BubblesortNamen {
 				}
 			}
 		}
-		System.out.println("Unsortiert: ");
+		System.out.println("Sortiert: ");
 		for (int a = 0; a < liste.length; a++) {
 
 			System.out.println(liste[a]);
