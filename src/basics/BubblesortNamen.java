@@ -6,8 +6,10 @@ public class BubblesortNamen {
 		// TODO Auto-generated method stub
 
 		String liste[] = {"Max","Adrian","Tom","Felix","Niko"};
+	    for (int a = 0; a < liste.length; a++) {
+	    	System.out.println(liste[a]);}
 		
-		String temp;
+	    	String temp;
 		
 		for (int j= 0; j < liste.length; j++) {
 			for (int i = j+1; i < liste.length; i++) {
