@@ -11,7 +11,7 @@ public class Rechner {
 		double zweiteZahl;
 				char operator;
 		
-		System.out.println("Zahl1 (wird verwendet bei hoch und wurzel) :");
+		System.out.println("Zahl1 (wird verwendet bei wurzel) :");
 		ersteZahl = benutzereingabe.nextDouble();
 		
 		System.out.println("Zahl2 :");
@@ -29,7 +29,7 @@ public class Rechner {
 		} else if (operator == '-') {
 			System.out.println(ersteZahl - zweiteZahl);
 		} else if (operator == '^') {
-			int ergebnis = (int) Math.pow(ersteZahl, 2);
+			int ergebnis = (int) Math.pow(ersteZahl, zweiteZahl);
 			System.out.println(ergebnis);
 		} else if (operator == '[') {
 			System.out.println(Math.sqrt(ersteZahl));	
