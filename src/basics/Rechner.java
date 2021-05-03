@@ -11,13 +11,13 @@ public class Rechner {
 		double zweiteZahl;
 				char operator;
 		
-		System.out.println("Zahl1 :");
+		System.out.println("Zahl1 (wird verwendet bei hoch und wurzel) :");
 		ersteZahl = benutzereingabe.nextDouble();
 		
 		System.out.println("Zahl2 :");
 		zweiteZahl = benutzereingabe.nextDouble();
 		
-		System.out.println("Rechenzeichen ( +, -, *, /,):");
+		System.out.println("Rechenzeichen ( +, -, *, /, ^, [):");
 		operator = benutzereingabe.next().charAt(0);
 		
 		if (operator == '*') {
@@ -28,9 +28,19 @@ public class Rechner {
 			System.out.println(ersteZahl + zweiteZahl);
 		} else if (operator == '-') {
 			System.out.println(ersteZahl - zweiteZahl);
+		} else if (operator == '^') {
+			int ergebnis = (int) Math.pow(ersteZahl, 2);
+			System.out.println(ergebnis);
+		} else if (operator == '[') {
+			System.out.println(Math.sqrt(ersteZahl));	
 		} else {
 			System.out.println("Ist kein Rechenzeichen");
-		}
+		}		
+		
+		
+		
+		
+		
 	}
 }	
 		
