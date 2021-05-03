@@ -6,6 +6,7 @@ public class Rechner {
 		Scanner benutzereingabe = new Scanner(System.in);
 
 		
+		
 		double ersteZahl;
 		double zweiteZahl;
 				char operator;
