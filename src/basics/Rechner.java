@@ -3,44 +3,81 @@ import java.util.Scanner;
 public class Rechner {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Scanner benutzereingabe = new Scanner(System.in);
+		Scanner eingabe = new Scanner(System.in);
+
+		while (true) {
+			if (eingabe.hasNext("[q]")) {
+				System.out.println("Der rechner ist aus");
+
+				break;
+				
+				
+			}
+				
+				
+				if (eingabe.hasNextInt()) {
+					int ersteZahl = eingabe.nextInt();
+
+					System.out.println("Zahl1: " + ersteZahl);
+
+					continue;
+				
+				
+					if (eingabe.hasNextInt()) {
+						int zweiteZahl = eingabe.nextInt();
+
+						System.out.println("Zahl2: " + zweiteZahl);
+						continue;
+						
+				
+						String operator = eingabe.next("[+-\\\\/*^]");
+					
+					
+
+					if (eingabe.hasNext("[+]")) {
+						
+						System.out.println(ersteZahl + zweiteZahl);
+						
+					} else if (eingabe.hasNext("[-]")) {
+						
+						System.out.println(ersteZahl - zweiteZahl);
+					} else if (eingabe.hasNext("[\\/]")){
+						
+						System.out.println(ersteZahl / zweiteZahl);
+					} else if (eingabe.hasNext("[*]")) {
+						
+						System.out.println(ersteZahl * zweiteZahl);
+					} else if (eingabe.hasNext("[^]")) {
+						
+						int ergebnis = (int) Math.pow(ersteZahl, zweiteZahl);
+						System.out.println(ergebnis);
+					} else if (eingabe.hasNext("[]]")) {
+						
+						System.out.println(Math.sqrt(ersteZahl));	
+					} 
+					
+					
+					
+					
+				
+
+					
+				
+					
+				
+
+	
+			
+
+			
+				
 
 		
-		
-		double ersteZahl;
-		double zweiteZahl;
-				char operator;
-		
-		System.out.println("Zahl1 (wird verwendet bei wurzel) :");
-		ersteZahl = benutzereingabe.nextDouble();
-		
-		System.out.println("Zahl2 :");
-		zweiteZahl = benutzereingabe.nextDouble();
-		
-		System.out.println("Rechenzeichen ( +, -, *, /, ^, [):");
-		operator = benutzereingabe.next().charAt(0);
-		
-		if (operator == '*') {
-			System.out.println(ersteZahl * zweiteZahl);
-		} else if (operator == '/') {
-			System.out.println(ersteZahl / zweiteZahl);
-		} else if (operator == '+') {
-			System.out.println(ersteZahl + zweiteZahl);
-		} else if (operator == '-') {
-			System.out.println(ersteZahl - zweiteZahl);
-		} else if (operator == '^') {
-			int ergebnis = (int) Math.pow(ersteZahl, zweiteZahl);
-			System.out.println(ergebnis);
-		} else if (operator == '[') {
-			System.out.println(Math.sqrt(ersteZahl));	
-		} else {
-			System.out.println("Ist kein Rechenzeichen");
-		}		
+
+					
 		
 		
-		
-		
-		
-	}
-}	
+				
+					}}				}}}
+
 		
