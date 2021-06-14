@@ -2,63 +2,85 @@ package basics;
 
 import java.util.Scanner;
 
+
+
 public class Rechner {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		System.out.println("Taschenrechner");
+		System.out.println("Bitte geben Sie die erste Zahl ein!");
+		double Zahl = 0;
+		double Ergebniss = 0;
 		Scanner eingabe = new Scanner(System.in);
-		int ersteZahl = 0;
+		
 		while (true) {
 			if (eingabe.hasNext("[q]")) {
 				System.out.println("Der rechner ist aus");
 
 				break;
-
+				
 			}
-
 			
-
 			if (eingabe.hasNextInt()) {
-				ersteZahl = eingabe.nextInt();
+				Zahl = eingabe.nextInt();
 
-				System.out.println("Zahl1: " + ersteZahl);
-
+				System.out.println("Zahl1: " + Zahl);
+				System.out.println("Bitte geben Sie den Rechenoperator an!");
 				continue;
 
 			}
-
+			
+			
+			
 			if (eingabe.hasNext("[]]")) {
 				String zeichen = eingabe.next("[]]");
-				System.out.println(Math.sqrt(ersteZahl));
+				Ergebniss = (Math.sqrt(Zahl));
+				Zahl = Ergebniss;
+				System.out.println(Ergebniss);
 				continue;
 			}
-
+			System.out.println("Bitte geben Sie die zweite Zahl ein!");
 			if (eingabe.hasNext("[+]")) {
 				String zeichen = eingabe.next("[+]");
-				System.out.println(ersteZahl + eingabe.nextInt());
+				Ergebniss = (Zahl + eingabe.nextInt());
+				Zahl = Ergebniss;
+				System.out.println(Ergebniss);
 				continue;
 			}
+			
 			if (eingabe.hasNext("[-]")) {
 				String zeichen = eingabe.next("[-]");
-				System.out.println(ersteZahl - eingabe.nextInt());
+				Ergebniss = (Zahl - eingabe.nextInt());
+				Zahl = Ergebniss;
+				System.out.println(Ergebniss);
 				continue;
 			}
+			
 			if (eingabe.hasNext("[\\/]")) {
-				String zeichen = eingabe.next("[/]");
-				System.out.println(ersteZahl / eingabe.nextInt());
+				String zeichen = eingabe.next("[\\/]");
+				Ergebniss = (Zahl / eingabe.nextInt());
+				Zahl = Ergebniss;
+				System.out.println(Ergebniss);
 				continue;
 			}
-			if (eingabe.hasNext("[+]")) {
-				String zeichen = eingabe.next("[+]");
-				System.out.println(ersteZahl + eingabe.nextInt());
+			
+			if (eingabe.hasNext("[*]")) {
+				String zeichen = eingabe.next("[*]");
+				Ergebniss = (Zahl * eingabe.nextInt());
+				Zahl = Ergebniss;
+				System.out.println(Ergebniss);
 				continue;
 			}
-			if (eingabe.hasNext("[^]")) {
-				String zeichen = eingabe.next("[^]");
-				System.out.println(Math.pow(ersteZahl, eingabe.nextInt()));
+		
+			if (eingabe.hasNext("[s]")) {
+				String zeichen = eingabe.next("[s]");
+				Ergebniss = (int) (Math.pow(Zahl, eingabe.nextInt()));
+				Zahl = Ergebniss;
+				System.out.println(Ergebniss);
 				continue;
+				
 			}
-			eingabe.close();
-
+			
 		}
 	}
 }
