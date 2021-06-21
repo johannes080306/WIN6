@@ -25,7 +25,7 @@ public class Rechner {
 				Zahl = eingabe.nextInt();
 
 				System.out.println("Zahl1: " + Zahl);
-				System.out.println("Bitte geben Sie den Rechenoperator an!");
+				System.out.println("Bitte geben Sie den Rechenoperator (+ - * / s ] ) an!");
 				continue;
 
 			}
@@ -74,7 +74,7 @@ public class Rechner {
 		
 			if (eingabe.hasNext("[s]")) {
 				String zeichen = eingabe.next("[s]");
-				Ergebniss = (int) (Math.pow(Zahl, eingabe.nextInt()));
+				Ergebniss = (Math.pow(Zahl, eingabe.nextInt()));
 				Zahl = Ergebniss;
 				System.out.println(Ergebniss);
 				continue;
